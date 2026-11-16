@@ -1,0 +1,103 @@
+
+<section id="hero" data-screen-label="01 Hero">
+  <!-- Headline row -->
+  <div class="hero-head px-6 md:px-12 pt-14 pb-8">
+    <div class="hero-head-grid">
+      <h1 class="hero-jp" id="heroJP">
+        <span class="line"><span class="w">自分の</span><span class="w">ペースで、</span></span>
+        <span class="line"><span class="w">本物の</span><span class="w">仕事を。</span></span>
+      </h1>
+
+      <div class="hero-sub">
+        <div class="hero-sub-en f-display-i">
+          Draw the honest <em>trail</em><br />for your future.
+        </div>
+
+        <div class="hero-sub-jp f-jp">
+          奈良・生駒・大和郡山の就労継続支援B型事業所。<br />
+          Webサイト、デザイン、撮影、ライティング、軽作業、レジン——<br />
+          現場の手で、本物のアウトプットを届けます。
+        </div>
+
+        <div class="mt-6 flex flex-wrap items-center gap-3">
+          <a href="#contact" class="magnet inline-flex items-center gap-3 px-5 py-3 rounded-full text-[13px]" style="background: var(--ink); color: var(--bg); font-family:'Manrope'; font-weight: 500; letter-spacing: 0.06em;" data-cursor="link">
+            Start a project <span>→</span>
+          </a>
+
+          <a href="#works" class="magnet inline-flex items-center gap-3 px-5 py-3 rounded-full border text-[13px]" style="border-color: var(--ink); font-family:'Manrope'; font-weight: 500; letter-spacing: 0.06em;" data-cursor="link">
+            View works <span>↘</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slider -->
+  <div class="hero-slider px-6 md:px-12">
+    <div class="slider-frame" id="heroSlider" data-cursor="image" data-cursor-label="VIEW">
+      <div class="slides">
+        <div class="slide is-on" data-cap="現場の手で。 / Studio · 01" style="background-image: url('/hiraku/images/office-work.jpg');"></div>
+        <div class="slide" data-cap="チームの息づかい。 / Atelier · 02" style="background-image: url('/hiraku/images/office-wide.jpg');"></div>
+        <div class="slide" data-cap="集中、それぞれのリズム。 / Desks · 03" style="background-image: url('/hiraku/images/office-desks.jpg');"></div>
+        <div class="slide" data-cap="手作業、丁寧に。 / Packing · 04" style="background-image: url('/hiraku/images/work-packing.webp');"></div>
+        <div class="slide" data-cap="未来へ、いざ。 / Future · 05" style="background-image: url('/hiraku/images/team-fists.webp');"></div>
+      </div>
+
+      <!-- caption -->
+      <div class="slider-cap">
+        <span class="d"></span>
+        <span id="slideCap">現場の手で。 / Studio · 01</span>
+      </div>
+
+      <!-- counter -->
+      <div class="slider-count">
+        <span id="slideIdx">01</span>
+        <span style="opacity:.4"> / </span>
+        <span id="slideTotal">05</span>
+      </div>
+
+      <!-- nav -->
+      <button class="slide-nav prev magnet" id="slidePrev" data-cursor="link" aria-label="Previous slide">
+        <svg width="20" height="20" viewBox="0 0 20 20">
+          <path d="M13 4L7 10L13 16" stroke="currentColor" stroke-width="1.6" fill="none" />
+        </svg>
+      </button>
+
+      <button class="slide-nav next magnet" id="slideNext" data-cursor="link" aria-label="Next slide">
+        <svg width="20" height="20" viewBox="0 0 20 20">
+          <path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="1.6" fill="none" />
+        </svg>
+      </button>
+
+      <!-- progress bar -->
+      <div class="slider-progress"><i id="slideProgress"></i></div>
+
+      <!-- dots -->
+      <div class="slider-dots" id="slideDots"></div>
+    </div>
+  </div>
+
+  <!-- Bottom information -->
+  <div class="px-6 md:px-12 py-6 flex items-center justify-between">
+    <div class="vertical-text hidden md:flex" style="writing-mode: horizontal-tb; gap: 14px;">
+      <span>Ikoma, Nara</span>
+      <span style="color: var(--blue);">→</span>
+      <span>34.6845°N / 135.6997°E</span>
+    </div>
+
+    <a href="#statement" class="flex items-center gap-3 label" data-cursor="link">
+      <span>Scroll to explore</span>
+      <span class="scroll-arrow">
+        <svg width="12" height="12" viewBox="0 0 12 12">
+          <path d="M6 1V11M6 11L1 6M6 11L11 6" stroke="currentColor" stroke-width="1.2" />
+        </svg>
+      </span>
+    </a>
+
+    <div class="label hidden md:block" id="liveTime">00:00:00 JST</div>
+  </div>
+</section>
+
+<script>
+  import "../scripts/hero-slider.js";
+</script>

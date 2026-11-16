@@ -1,4 +1,13 @@
 ---
+import HirakuLayout from "../layouts/hiraku-layout.astro";
+import Hero from "../components/hero.astro";
+---
+
+<HirakuLayout title="HIRAKU | トップページ">
+  <Hero />
+</HirakuLayout>
+
+<!-- ---
 import {
 	getEmDashCollection,
 	getTermsForEntries,
@@ -191,4 +200,4 @@ const gridPostsWithTags = gridPosts.map((post) => ({
 			margin-block-end: 0;
 		}
 	}
-</style>
+</style> -->
