@@ -25,7 +25,8 @@
 }
 .hero-jp .w {
   display: inline-block;
-  will-change: transform;
+  will-change: transform, opacity;
+  opacity: 0;
 }
 .hero-sub {
   padding-bottom: 6px;

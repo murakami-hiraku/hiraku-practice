@@ -1,0 +1,32 @@
+/* Statement marks */
+.stmt-mark {
+  position: absolute;
+  z-index: 10;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--ink-soft);
+}
+
+.stmt-mark--tl {
+  top: 32px;
+  left: 32px;
+}
+
+.stmt-mark--tr {
+  top: 32px;
+  right: 32px;
+}
+
+.stmt-mark--bl {
+  bottom: 32px;
+  left: 32px;
+}
+
+.stmt-mark--br {
+  bottom: 32px;
+  right: 32px;
+}
+.stmt-text .line {
+  overflow: hidden;
+}
