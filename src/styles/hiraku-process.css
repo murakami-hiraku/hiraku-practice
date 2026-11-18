@@ -1,0 +1,131 @@
+/* ============ PROCESS ============ */
+#process {
+  background: var(--blue-soft);
+  color: var(--ink);
+  position: relative;
+}
+.prc-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+.prc-left {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5vw;
+  align-self: start;
+}
+.prc-left .stage {
+  position: relative;
+  width: 100%;
+}
+.prc-left .title {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 16px;
+}
+.prc-left .step-en {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(40px, 4.6vw, 68px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  color: var(--blue);
+}
+.prc-left .num {
+  font-family: "Manrope";
+  font-weight: 800;
+  font-size: clamp(180px, 24vw, 380px);
+  line-height: 0.82;
+  letter-spacing: -0.05em;
+  color: var(--ink);
+  display: flex;
+  gap: 8px;
+  overflow: hidden;
+}
+.prc-left .num .digit {
+  display: inline-block;
+  height: 1em;
+  overflow: hidden;
+  position: relative;
+}
+.prc-left .num .digit-stack {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.9s cubic-bezier(0.7, 0, 0.2, 1);
+}
+.prc-left .num .digit-stack span {
+  display: block;
+  height: 1em;
+  line-height: 1;
+}
+
+.prc-right {
+  padding: 120px 5vw;
+}
+.prc-block {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 1px solid var(--ink);
+  padding: 60px 0;
+}
+.prc-block:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+.prc-block .pill {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  background: var(--ink);
+  color: var(--bg);
+  padding: 6px 12px;
+  border-radius: 100px;
+  width: max-content;
+  margin-bottom: 24px;
+}
+.prc-block h3 {
+  font-family: "Shippori Mincho B1", serif;
+  font-weight: 700;
+  font-size: clamp(28px, 3vw, 44px);
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+  margin-bottom: 20px;
+}
+.prc-block p {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 15px;
+  line-height: 1.95;
+  color: var(--ink-soft);
+  max-width: 480px;
+}
+
+@media (max-width: 900px) {
+  .prc-wrap {
+    grid-template-columns: 1fr;
+  }
+  .prc-left {
+    position: relative;
+    height: auto;
+    padding: 80px 24px 0;
+  }
+  .prc-right {
+    padding: 40px 24px 80px;
+  }
+  .prc-block {
+    min-height: 0;
+    padding: 40px 0;
+  }
+}

@@ -1,0 +1,116 @@
+---
+import "../styles/header.css";
+---
+<header id="header">
+  <!-- ロゴ -->
+  <a href="/" class="brand-mark">
+    <img
+      src="/hiraku/images/logo.png"
+      alt="HIRAKU"
+      class="brand-logo"
+    />
+  </a>
+
+  <!-- グローバルナビゲーション -->
+  <nav class="nav-row" aria-label="Primary">
+    <a href="/" class="nav-link">
+      <span class="num">01</span>HOME
+    </a>
+
+    <!-- FACILITY サブメニュー -->
+    <div class="nav-item-sub">
+      <a href="/ikoma/" class="nav-link">
+        <span class="num">02</span>FACILITY
+      </a>
+
+      <div class="sub-menu">
+        <a href="/ikoma/">
+          <span class="sn">A</span>
+          Ikoma
+          <span class="ja">生駒</span>
+        </a>
+
+        <a href="/koriyama/">
+          <span class="sn">B</span>
+          Koriyama
+          <span class="ja">郡山</span>
+        </a>
+
+        <a href="/clean/">
+          <span class="sn">C</span>
+          Clean
+          <span class="ja">クリーン</span>
+        </a>
+      </div>
+    </div>
+
+    <a href="/works/" class="nav-link">
+      <span class="num">03</span>WORKS
+    </a>
+
+    <a href="/about/" class="nav-link">
+      <span class="num">04</span>ABOUT
+    </a>
+
+    <a href="/contact/" class="nav-link">
+      <span class="num">05</span>CONTACT
+    </a>
+  </nav>
+
+  <!-- CTAボタン -->
+  <a href="/contact/" class="nav-cta">
+    START A PROJECT <span>→</span>
+  </a>
+
+
+<!-- ハンバーガーボタン -->
+<button
+  class="menu-toggle"
+  id="menuToggle"
+  aria-label="メニューを開く"
+  aria-expanded="false"
+  aria-controls="mobileMenu"
+>
+  <span></span>
+  <span></span>
+</button>
+
+<!-- スマホ用メニュー -->
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+  <a href="/">
+    <span class="num">01</span>
+    HOME
+  </a>
+
+  <div class="mobile-menu-group">
+    <span class="mobile-menu-heading">
+      <span class="num">02</span>
+      FACILITY
+    </span>
+
+    <a href="/ikoma/">A — Ikoma <small>生駒</small></a>
+    <a href="/koriyama/">B — Koriyama <small>郡山</small></a>
+    <a href="/clean/">C — Clean <small>クリーン</small></a>
+  </div>
+
+  <a href="/works/">
+    <span class="num">03</span>
+    WORKS
+  </a>
+
+  <a href="/about/">
+    <span class="num">04</span>
+    ABOUT
+  </a>
+
+  <a href="/contact/">
+    <span class="num">05</span>
+    CONTACT
+  </a>
+</nav>
+
+</header>
+
+<script>
+  import "../scripts/header.js";
+</script>

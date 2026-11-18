@@ -1,0 +1,120 @@
+
+---
+import "../styles/hiraku-works.css";
+
+const works = [
+  {
+    num: "01",
+    title: "Website Design",
+    category: "WEB DESIGN",
+    year: "2026",
+    image: "/hiraku/images/office-wide.jpg",
+    left: "4%",
+    top: "0",
+    width: "32%",
+    height: "320px",
+    rotation: "-1.5deg",
+  },
+  {
+    num: "02",
+    title: "Creative Works",
+    category: "CREATIVE",
+    year: "2026",
+    image: "/hiraku/images/team-01.jpg",
+    left: "50%",
+    top: "20px",
+    width: "38%",
+    height: "300px",
+    rotation: "1deg",
+  },
+  {
+    num: "03",
+    title: "Resin Product",
+    category: "PRODUCT",
+    year: "2026",
+    image: "/hiraku/images/resin.png",
+    left: "10%",
+    top: "320px",
+    width: "34%",
+    height: "320px",
+    rotation: "1.8deg",
+  },
+  {
+    num: "04",
+    title: "Packing Work",
+    category: "WORK",
+    year: "2026",
+    image: "/hiraku/images/work-packing.webp",
+    left: "54%",
+    top: "300px",
+    width: "32%",
+    height: "340px",
+    rotation: "-1.2deg",
+  },
+];
+---
+
+<section id="works" data-screen-label="04 Works">
+  <!-- セクション見出し -->
+  <div class="works-head">
+    <div>
+      <div class="label mb-6">04 / Works — 制作実績</div>
+
+      <h2>
+        Selected<br />
+        <em>works</em>
+        <span class="f-mono">/ 04</span>
+      </h2>
+    </div>
+
+    <div class="works-description">
+      最近、利用者のみなさんと一緒につくった仕事を、いくつか。<br />
+      もっと見たい方は、制作実績一覧へ。
+    </div>
+  </div>
+
+  <!-- 制作実績カード -->
+  <div class="works-canvas" id="worksCanvas">
+    {
+      works.map((work) => (
+        <a
+          class="work-card"
+          href="#"
+          style={`left:${work.left}; top:${work.top}; width:${work.width}; height:${work.height}; transform:rotate(${work.rotation});`}
+          data-rot={work.rotation}
+        >
+          <div class="ph">
+            <img src={work.image} alt={work.title} />
+          </div>
+
+          <div class="view">→ View</div>
+
+          <div class="meta">
+            <span class="num">#{work.num}</span>
+
+            <span class="name">
+              {work.title}
+              <small>
+                {work.category} · {work.year}
+              </small>
+            </span>
+          </div>
+        </a>
+      ))
+    }
+  </div>
+
+  <!-- 制作実績一覧へのリンク -->
+  <div class="works-cta">
+    <a href="#" class="works-cta-btn">
+      <span class="num">VIEW ALL — 04 / 04</span>
+      <span class="lbl">制作実績一覧を見る</span>
+      <span class="arr">→</span>
+    </a>
+  </div>
+</section>
+
+<!-- Works用JavaScript -->
+<script>
+  import "../scripts/works.js";
+</script>

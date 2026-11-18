@@ -1,5 +1,8 @@
 ---
 import "../styles/hiraku-hero.css";
+import Header from "../components/header.astro";
+import Footer from "../components/footer.astro";
+
 
 const { title = "HIRAKU" } = Astro.props;
 ---
@@ -14,6 +17,8 @@ const { title = "HIRAKU" } = Astro.props;
     <link rel="stylesheet" href="/hiraku/css/theme.css" />
   </head>
   <body>
+     <Header />
     <slot />
+    <Footer />
   </body>
 </html>

@@ -1,0 +1,228 @@
+/* Facility sub-menu */
+.nav-item-sub {
+  position: relative;
+  display: inline-flex;
+  padding-bottom: 28px;
+  margin-bottom: -28px;
+}
+.nav-item-sub > .nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.nav-item-sub > .nav-link::after {
+  content: "▾";
+  font-size: 9px;
+  opacity: 0.5;
+  margin-left: 4px;
+  transition:
+    transform 0.25s,
+    opacity 0.2s;
+}
+.nav-item-sub:hover > .nav-link::after {
+  transform: rotate(-180deg);
+  opacity: 1;
+  color: var(--lime);
+}
+.nav-item-sub .sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  background: #0d1117;
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 10px;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  pointer-events: none;
+  transition:
+    opacity 0.25s,
+    transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  z-index: 110;
+  box-shadow: 0 30px 60px -30px rgba(13, 17, 23, 0.5);
+}
+.nav-item-sub:hover .sub-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transform: translateX(-50%) translateY(0);
+}
+.sub-menu a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-family: "Manrope";
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.78);
+  transition:
+    background 0.2s,
+    color 0.2s,
+    padding 0.2s;
+}
+.sub-menu a:hover {
+  background: #d4ff3d;
+  color: #0d1117;
+  padding-left: 18px;
+}
+.sub-menu a .sn {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  opacity: 0.5;
+}
+.sub-menu a:hover .sn {
+  opacity: 0.7;
+}
+.sub-menu a .ja {
+  font-family: "Shippori Mincho B1", serif;
+  font-size: 11px;
+  margin-left: auto;
+  opacity: 0.55;
+  letter-spacing: 0.06em;
+}
+.sub-menu a:hover .ja {
+  opacity: 0.7;
+  color: rgba(13, 17, 23, 0.7);
+}
+
+.nav-item-sub .sub-menu {
+  /* 既存のCSSはそのまま */
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* ============ MOBILE MENU ============ */
+
+/* ハンバーガーボタン */
+.menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  z-index: 120;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--ink);
+  margin: 6px auto;
+  transition:
+    transform 0.3s,
+    opacity 0.3s;
+}
+
+/* メニュー本体 */
+.mobile-menu {
+  display: none;
+}
+
+/* スマホ表示 */
+@media (max-width: 900px) {
+  .nav-row,
+  .nav-cta {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 110;
+
+    background: #0d1117;
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+
+    padding: 90px 10vw;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+      opacity 0.3s,
+      visibility 0.3s;
+  }
+
+  .mobile-menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-family: "Manrope";
+    font-size: clamp(24px, 6vw, 36px);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+  }
+
+  .mobile-menu .num {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    color: var(--gray);
+  }
+
+  .mobile-menu-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .mobile-menu-heading {
+    font-family: "Manrope";
+    font-size: clamp(24px, 6vw, 36px);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+  }
+
+  .mobile-menu-group > a {
+    font-size: 16px;
+    padding-left: 32px;
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .mobile-menu-group small {
+    margin-left: auto;
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 12px;
+    opacity: 0.6;
+  }
+
+  /* メニューが開いた状態 */
+  .mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+
+  /* ボタンを×印に変化 */
+  .menu-toggle.is-open span:first-child {
+    transform: translateY(4px) rotate(45deg);
+    background: #ffffff;
+  }
+
+  .menu-toggle.is-open span:last-child {
+    transform: translateY(-4px) rotate(-45deg);
+    background: #ffffff;
+  }
+}
