@@ -1,4 +1,3 @@
-
 ---
 import "../styles/hiraku-works.css";
 
@@ -61,47 +60,47 @@ const works = [
       <div class="label mb-6">04 / Works — 制作実績</div>
 
       <h2>
-        Selected<br />
+        Selected
+        <br />
         <em>works</em>
         <span class="f-mono">/ 04</span>
       </h2>
     </div>
 
     <div class="works-description">
-      最近、利用者のみなさんと一緒につくった仕事を、いくつか。<br />
+      最近、利用者のみなさんと一緒につくった仕事を、いくつか。
+      <br />
       もっと見たい方は、制作実績一覧へ。
     </div>
   </div>
 
   <!-- 制作実績カード -->
   <div class="works-canvas" id="worksCanvas">
-    {
-      works.map((work) => (
-        <a
-          class="work-card"
-          href="#"
-          style={`left:${work.left}; top:${work.top}; width:${work.width}; height:${work.height}; transform:rotate(${work.rotation});`}
-          data-rot={work.rotation}
-        >
-          <div class="ph">
-            <img src={work.image} alt={work.title} />
-          </div>
+    {works.map((work) => (
+      <a
+        class="work-card"
+        href="#"
+        style={`left:${work.left}; top:${work.top}; width:${work.width}; height:${work.height}; transform:rotate(${work.rotation});`}
+        data-rot={work.rotation}
+      >
+        <div class="ph">
+          <img src={work.image} alt={work.title} />
+        </div>
 
-          <div class="view">→ View</div>
+        <div class="view">→ View</div>
 
-          <div class="meta">
-            <span class="num">#{work.num}</span>
+        <div class="meta">
+          <span class="num">#{work.num}</span>
 
-            <span class="name">
-              {work.title}
-              <small>
-                {work.category} · {work.year}
-              </small>
-            </span>
-          </div>
-        </a>
-      ))
-    }
+          <span class="name">
+            {work.title}
+            <small>
+              {work.category} · {work.year}
+            </small>
+          </span>
+        </div>
+      </a>
+    ))}
   </div>
 
   <!-- 制作実績一覧へのリンク -->

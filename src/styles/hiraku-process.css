@@ -61,7 +61,7 @@
 .prc-left .num .digit-stack {
   display: flex;
   flex-direction: column;
-  transition: transform 0.9s cubic-bezier(0.7, 0, 0.2, 1);
+  transition: none;
 }
 .prc-left .num .digit-stack span {
   display: block;
