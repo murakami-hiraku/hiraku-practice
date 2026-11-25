@@ -1,36 +1,48 @@
 ---
-import Base from "../layouts/Base.astro";
+import HirakuLayout from "../layouts/hiraku-layout.astro";
 import "../styles/pages/about.css";
 ---
 
-<Base title="About NECESS.">
+<HirakuLayout title="About NECESS.">
   <section id="hero">
-    <div class="hero-inner">
-      <div class="hero-breadcrumb">
-        <a href="/">HOME</a>
-        <span>/</span>
-        <span>ABOUT</span>
-      </div>
+    <div class="crumbs">
+      <a href="/" data-cursor="link">
+        HIRAKU WORK
+      </a>
+      <span class="arr">→</span>
+      <b>ABOUT</b>
+      <span class="arr">·</span>
+      <span style="opacity: .55;">04 / 05</span>
+    </div>
 
+    <div class="hero-grid">
       <h1 class="hero-title">
-        <span>About</span>
-        <span>NECESS.</span>
+        <span class="line">
+          <span class="w">About</span>
+        </span>
+        <span class="line">
+          <span class="w">
+            NECESS<span class="dot">.</span>
+          </span>
+        </span>
       </h1>
 
-      <div class="hero-content">
-        <h2>
+      <div class="hero-sub">
+        <h2 class="ja">
           必要とされる、
           <br />
           会社であるために。
         </h2>
 
-        <p class="hero-en">We start from yes.</p>
+        <div class="en">
+          We start <em>from yes.</em>
+        </div>
 
-        <p class="hero-description">
-          私たちは、必要とされる存在であり続けるために、
-          一人ひとりの想いと向き合い、新しい価値を生み出していきます。
+        <p>
+          HIRAKU WORK
+          を運営する株式会社ナッセは、福祉介護施設の開業支援から、介護・障害福祉サービスの運営まで、幅広く事業を展開しています。社名は「Necessary（必要な）」に由来します。
         </p>
       </div>
     </div>
   </section>
-</Base>
+</HirakuLayout>
